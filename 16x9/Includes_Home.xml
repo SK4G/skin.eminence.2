@@ -464,7 +464,7 @@
                 <orientation>horizontal</orientation>
                 <!-- Hack for Extended Info and Notification property setting -->
                 <onclick>SetFocus(9000)</onclick>
-                <onclick condition="String.StartsWith(ListItem.Property(path),ActivateWindow) + !String.Contains(ListItem.Property(path),DialogFavourites) + !String.Contains(ListItem.Property(path),DialogButtonMenu) + !String.Contains(ListItem.Property(path),shutdownmenu) + !String.Contains(ListItem.Property(path),favourites)">SetProperty(FO9001,2,home)</onclick>
+                <onclick condition="String.StartsWith(ListItem.Property(path),ActivateWindow) + !String.Contains(ListItem.Property(path),MyFavourites) + !String.Contains(ListItem.Property(path),DialogButtonMenu) + !String.Contains(ListItem.Property(path),shutdownmenu) + !String.Contains(ListItem.Property(path),favourites)">SetProperty(FO9001,2,home)</onclick>
                 <onclick>$INFO[ListItem.Property(path)]</onclick>
                 <itemlayout width="374" height="69">
                     <control type="image">
