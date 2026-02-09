@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
     <variable name="Image_Widget_Poster" containers="9001" start="-10" end="10">
-        <value condition="Skin.HasSetting(home.rpdb) + !String.IsEmpty({listitem}.Art(rpdb.poster))">$INFO[{listitem}.Art(rpdb.poster)]</value>
         <value condition="!String.IsEmpty({listitem}.Art(tvshow.poster))">$INFO[{listitem}.Art(tvshow.poster)]</value>
         <value condition="!String.IsEmpty({listitem}.Art(poster))">$INFO[{listitem}.Art(poster)]</value>
         <value>$INFO[{listitem}.Icon]</value>

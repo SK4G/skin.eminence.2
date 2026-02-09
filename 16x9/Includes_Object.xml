@@ -190,14 +190,6 @@
             <height>320</height>
             <visible>[!String.IsEmpty(Container(9001).ListItem($PARAM[id]).Art(poster)) | !String.IsEmpty(Container(9001).ListItem($PARAM[id]).Art(tvshow.poster))] + [String.IsEqual(Container(9001).ListItem($PARAM[id]).DBType,episode) | String.IsEqual(Container(9001).ListItem($PARAM[id]).DBType,tvshow) | String.IsEqual(Container(9001).ListItem($PARAM[id]).DBType,season) | String.IsEqual(Container(9001).ListItem($PARAM[id]).DBType,set) | String.IsEqual(Container(9001).ListItem($PARAM[id]).DBType,movie)]</visible>
 
-            <!-- Hidden button to handle delay -->
-            <control type="button" id="9990">
-                <width>1</width>
-                <height>1</height>
-                <visible>Skin.HasSetting(home.autoplaytrailers) + $PARAM[focuseditem]</visible>
-                <animation effect="fade" start="0" end="100" time="$INFO[Skin.String(home.autoplaytrailers.delay)]000" condition="true">Visible</animation>
-            </control>
-
             <control type="image">
                 <centerleft>50%</centerleft>
                 <width>220</width>
@@ -209,16 +201,6 @@
                 <texture fallback="DefaultWidgetVideo.png">$VAR[Image_Widget_Poster_C9001_$PARAM[id]]</texture>
                 <visible>[Control.HasFocus(9001) | Control.HasFocus(9101)]</visible>
                 <visible>$PARAM[focuseditem]</visible>
-                <visible>!Control.IsVisible(9991)</visible>
-            </control>
-
-            <!-- Video Window for Auto-play -->
-            <control type="videowindow" id="9991">
-                <centerleft>50%</centerleft>
-                <width>220</width>
-                <bottom>0</bottom>
-                <top>0</top>
-                <visible>Skin.HasSetting(home.autoplaytrailers) + $PARAM[focuseditem] + Control.IsVisible(9990) + !String.IsEmpty(Container(9001).ListItem($PARAM[id]).Trailer)</visible>
             </control>
 
             <control type="group">
