@@ -28,6 +28,19 @@
     <controls>
 
         <include>Furniture_Background</include>
+
+        <!-- Video Window for Auto-play Trailers -->
+        <control type="videowindow">
+            <include condition="!Skin.HasSetting(global.hideobjectshadows)">Object_Background_Shadows</include>
+            <visible>Skin.HasSetting(home.autoplaytrailers) + Player.HasVideo + !Skin.HasSetting(background.showvideo)</visible>
+            <animation effect="fade" start="0" end="100" time="400">Visible</animation>
+            <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+            <posx>305</posx>
+            <posy>400</posy>
+            <width>2000</width>
+            <height>340</height>
+        </control>
+
         <include>Home_Widget_Control</include>
         <include>Furniture_TopBar</include>
 

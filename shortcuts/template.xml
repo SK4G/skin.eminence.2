@@ -29,6 +29,9 @@
                 <itemlayout />
                 <focusedlayout width="1920" height="1080" />
                 <content target="$SKINSHORTCUTS[target]">$SKINSHORTCUTS[content]</content>
+                <!-- Auto-play Trailers Logic -->
+                <onitemfocused condition="Skin.HasSetting(home.autoplaytrailers) + !String.IsEmpty(ListItem.Trailer)">CancelAlarm(AutoPlayTrailer)</onitemfocused>
+                <onitemfocused condition="Skin.HasSetting(home.autoplaytrailers) + !String.IsEmpty(ListItem.Trailer)">AlarmClock(AutoPlayTrailer,PlayMedia($INFO[ListItem.Trailer],1,noresume),00:$INFO[Skin.String(home.autoplaytrailers.delay)],silent)</onitemfocused>
             </control>
         </controls>
     </submenuOther>
@@ -63,6 +66,9 @@
                 <itemlayout />
                 <focusedlayout width="1920" height="1080" />
                 <content target="$SKINSHORTCUTS[target]">$SKINSHORTCUTS[content]</content>
+                <!-- Auto-play Trailers Logic -->
+                <onitemfocused condition="Skin.HasSetting(home.autoplaytrailers) + !String.IsEmpty(ListItem.Trailer)">CancelAlarm(AutoPlayTrailer)</onitemfocused>
+                <onitemfocused condition="Skin.HasSetting(home.autoplaytrailers) + !String.IsEmpty(ListItem.Trailer)">AlarmClock(AutoPlayTrailer,PlayMedia($INFO[ListItem.Trailer],1,noresume),00:$INFO[Skin.String(home.autoplaytrailers.delay)],silent)</onitemfocused>
             </control>
         </controls>
     </other>
