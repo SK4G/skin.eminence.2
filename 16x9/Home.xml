@@ -28,6 +28,7 @@
     <controls>
 
         <include>Furniture_Background</include>
+
         <include>Home_Widget_Control</include>
         <include>Furniture_TopBar</include>
 
